@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		Login Page
+	</head>
+	<body>
+		<div class="body"></div>
+		<div class="grad"></div>
+		<div class="header">
+			<div>Air<span>Bus</span></div>
+		</div>
+		<br>
+		<div class="login" [formGroup]="loginForm">
+				<input type="text" placeholder="username" formControlName="username" name="user">
+				<span class="errorSpan" *ngIf="f.username.errors">
+					<span *ngIf="f.username.errors.required && f.username.touched">Username is required</span>
+				</span><br>
+				<input type="password" placeholder="password" formControlName="password" name="password">
+				<span class="errorSpan" *ngIf="f.password.errors">
+					<span *ngIf="f.password.errors.required && f.password.touched">Password is required</span>
+				</span><br>
+				<button (click)="login()" [disabled]="loginForm.invalid" value="Login">Login</button><br>
+				<button (click)="register()" [disabled]="loginForm.invalid" value="Register">Register</button>
+				<span class="registerMsg" *ngIf="createResult">{{createResult}}</span>		
+			</div>
+		
+	</body>
+</html>

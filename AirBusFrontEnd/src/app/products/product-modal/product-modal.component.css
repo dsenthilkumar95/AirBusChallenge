@@ -1,0 +1,59 @@
+@import url(https://fonts.googleapis.com/css?family=Exo:100,200,400);
+@import url(https://fonts.googleapis.com/css?family=Source+Sans+Pro:700,400,300);
+
+p {
+    font-family: Lato;
+  }
+
+.dialog-title{
+  position: relative;
+  left: 18vw;
+}
+
+.dialog-form{
+  position: relative;
+}
+
+.dialog-actions{ 
+  position: relative;
+  left: 30vw;
+}
+.dialog-input-category{
+  position: relative;
+  left: 15vw;
+}
+
+.dialog-input-name{
+  position: relative;
+  left: 16.5vw;
+}
+
+.dialog-input-description{
+  position: relative;
+  left: 14vw;
+}
+
+.dialog-input-units{
+  position: relative;
+  left: 16.75vw;
+}
+
+.dialog-label{
+  position: relative;
+  left: 8vw;
+}
+.errorSpan-category{
+  position: relative;
+  left:18vw;
+  color: red;
+}
+.errorSpan-name{
+  position: relative;
+  left: 19.5vw;
+  color: red;
+}
+.errorSpan-units{
+  position: relative;
+  left:20vw;
+  color: red;
+}

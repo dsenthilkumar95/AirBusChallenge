@@ -1,0 +1,244 @@
+@import url(https://fonts.googleapis.com/css?family=Exo:100,200,400);
+@import url(https://fonts.googleapis.com/css?family=Source+Sans+Pro:700,400,300);
+
+p {
+    font-family: Lato;
+  }
+  
+  .example-container {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .mat-table {
+    overflow: auto;
+    max-height: 500px;
+    background-color: transparent;
+    
+  }
+  .mat-paginator{
+    background-color: transparent;
+    color: white;
+  }
+  .mat-cell,.mat-header-cell {
+    color: white;
+  }
+  .mat-header-row{
+    color: white;
+  }
+
+  .md-table-pagination {
+    color:white;
+   }
+.mat-button{
+    height: 50px !important;
+      width: 13vw !important;
+      font-size: 17px !important;
+      background: transparent;
+      color: white;
+      border: 1px solid aliceblue;
+      align-self: flex-end;
+      right: 12vw;
+  }
+.logout-button{
+  height: 50px !important;
+    width: 8vw !important;
+    font-size: 17px !important;
+    background: transparent;
+    color: red;
+    border: 1px solid indianred;
+    align-self: flex-end;
+    font-weight: 1000;
+    right:0vw;
+}
+.search-input{
+  height: 50px !important;
+    width: 15vw !important;
+    font-size: 17px !important;
+    background: transparent;
+    color: white;
+    border: 1px solid aliceblue;
+    align-self: flex-start;
+    border-color: white;
+    position: absolute;
+    left: 1vw;
+  }
+  .category-input{
+    height: 50px !important;
+    width: 15vw !important;
+    font-size: 17px !important;
+    background: transparent;
+    color: white;
+    border: 1px solid aliceblue;
+    align-self: flex-end;
+    border-color: white;
+    position: absolute;
+    right:13vw;
+  }
+  .errorSpan{
+    position: absolute;
+    left: 25vw;
+    font-size: 17px;
+  }
+
+  #searchInput{
+    display: inline-block;
+    margin-right:10px;
+  }
+  #categoryInput{
+    display: inline-block;
+  }
+body{
+	margin: 0;
+	padding: 0;
+	/* background: #fff; */
+
+	/* color: #fff; */
+	font-family: Arial;
+	font-size: 12px;
+}
+
+.body{
+	position: absolute;
+	top: -20px;
+	left: -20px;
+	right: -40px;
+	bottom: -40px;
+	width: auto;
+	height: auto;
+	background-image: url(https://airbus-h.assetsadobe2.com/is/image/content/dam/channel-specific/website-/products-and-services/helicopters/Civil-Helicopter_Stage_Image.jpg?wid=1920&fit=fit,1&qlt=85,0);
+	background-size: cover;
+	-webkit-filter: blur(5px);
+	z-index: 0;
+}
+
+.grad{
+	position: absolute;
+	top: -20px;
+	left: -20px;
+	right: -40px;
+	bottom: -40px;
+	width: auto;
+	height: auto;
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(0,0,0,0)), color-stop(100%,rgba(0,0,0,0.65))); /* Chrome,Safari4+ */
+	z-index: 1;
+	opacity: 0.7;
+}
+
+.header{
+	position: absolute;
+	top: calc(20% - 50px);
+	left: calc(30% - 255px);
+	z-index: 2;
+}
+
+.header div{
+	float: left;
+	color: #fff;
+	font-family: 'Exo', sans-serif;
+	font-weight: 200;
+  width:80vw;
+  height:80vh;
+}
+
+.mat-column-Id {
+  word-wrap: break-word !important;
+  white-space: unset !important;
+  flex: 0 0 5% !important;
+  width: 5% !important;
+  overflow-wrap: break-word;
+  word-wrap: break-word;
+
+  word-break: break-word;
+
+  -ms-hyphens: auto;
+  -moz-hyphens: auto;
+  -webkit-hyphens: auto;
+  hyphens: auto;
+}
+
+.mat-column-Category {
+  word-wrap: break-word !important;
+  white-space: unset !important;
+  flex: 0 0 22% !important;
+  width: 22% !important;
+  overflow-wrap: break-word;
+  word-wrap: break-word;
+
+  word-break: break-word;
+
+  -ms-hyphens: auto;
+  -moz-hyphens: auto;
+  -webkit-hyphens: auto;
+  hyphens: auto;
+}
+
+.mat-column-Name {
+  word-wrap: break-word !important;
+  white-space: unset !important;
+  flex: 0 0 18% !important;
+  width: 18% !important;
+  overflow-wrap: break-word;
+  word-wrap: break-word;
+
+  word-break: break-word;
+
+  -ms-hyphens: auto;
+  -moz-hyphens: auto;
+  -webkit-hyphens: auto;
+  hyphens: auto;
+}
+
+.mat-column-Description {
+  word-wrap: break-word !important;
+  white-space: unset !important;
+  flex: 0 0 36% !important;
+  width: 36% !important;
+  overflow-wrap: break-word;
+  word-wrap: break-word;
+
+  word-break: break-word;
+
+  -ms-hyphens: auto;
+  -moz-hyphens: auto;
+  -webkit-hyphens: auto;
+  hyphens: auto;
+}
+
+.mat-column-Units {
+  word-wrap: break-word !important;
+  white-space: unset !important;
+  flex: 0 0 9% !important;
+  width: 9% !important;
+  overflow-wrap: break-word;
+  word-wrap: break-word;
+
+  word-break: break-word;
+
+  -ms-hyphens: auto;
+  -moz-hyphens: auto;
+  -webkit-hyphens: auto;
+  hyphens: auto;
+}
+
+.mat-paginator {
+  display: flex;
+  justify-content: center;
+} 
+
+::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
+  color: white;
+  opacity: 1; /* Firefox */
+}
+
+::ng-deep .mat-select-value{
+  color: white;
+}
+
+::ng-deep .mat-sort-header-stem{
+  color: white;
+}
+
+::ng-deep .mat-sort-header-indicator{
+  color: white;
+}

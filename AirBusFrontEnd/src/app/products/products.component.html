@@ -1,0 +1,63 @@
+<html>
+    <head>
+        <h3>Products</h3>
+    </head>
+    <body>
+        <div class="body"></div>
+        <div class="grad"></div>
+        <div class="header">
+        <div class="example-container mat-elevation-z8">
+            <button mat-button class="logout-button" (click)="logout()" color="primary">Log Out</button>
+            <div style="display: inline;height: 10vh">
+                <input matInput class="search-input" (keyup)="applyFilter($event)" placeholder="Search on Table" #searchInput>
+                <span class="errorSpan">{{errorMessage}}</span>
+                <input matInput class="category-input" (keyup)="applySearchByCategory($event)" placeholder="Category Search" #categoryInput>
+            </div>
+            <mat-table #table [dataSource]="dataSource" matSort matSortActive="id" matSortDirection="asc" >
+            
+                <ng-container matColumnDef="id">
+                    <mat-header-cell *matHeaderCellDef mat-sort-header> Id </mat-header-cell>
+                    <mat-cell *matCellDef="let element"> {{element.id}} </mat-cell>
+                </ng-container>
+
+                <ng-container matColumnDef="category">
+                    <mat-header-cell *matHeaderCellDef mat-sort-header> Category </mat-header-cell>
+                    <mat-cell *matCellDef="let element"> {{element.category}} </mat-cell>
+                </ng-container>
+
+                <ng-container matColumnDef="name">
+                    <mat-header-cell *matHeaderCellDef mat-sort-header> Name </mat-header-cell>
+                    <mat-cell *matCellDef="let element"> {{element.name}} </mat-cell>
+                </ng-container>
+              
+                <ng-container matColumnDef="description">
+                    <mat-header-cell *matHeaderCellDef mat-sort-header> Description </mat-header-cell>
+                    <mat-cell *matCellDef="let element"> {{element.description}} </mat-cell>
+                </ng-container>
+              
+                <ng-container matColumnDef="units">
+                    <mat-header-cell *matHeaderCellDef mat-sort-header> Units </mat-header-cell>
+                    <mat-cell *matCellDef="let element"> {{element.units}} </mat-cell>
+                </ng-container>
+
+                <ng-container matColumnDef="actions">
+                    <mat-header-cell *matHeaderCellDef mat-sort-header> Edit </mat-header-cell>
+                    <mat-cell *matCellDef="let element"><mat-icon (click)="updateProduct(element)" color="white">edit</mat-icon>
+                    </mat-cell>
+                </ng-container>
+                
+                <mat-header-row *matHeaderRowDef="displayedColumns; sticky: true"></mat-header-row>
+                
+                <mat-row *matRowDef="let row; columns: displayedColumns"></mat-row>
+            
+            </mat-table>
+            <mat-paginator #paginator
+            [pageSize]="3"
+            [pageSizeOptions]="[3,6,9]"></mat-paginator>
+            <button mat-button class="mat-button" (click)="createProduct()" color="primary">Create Product</button>
+        </div>
+        
+    </div>
+    </body>
+</html>
+ 
