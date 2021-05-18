@@ -50,9 +50,7 @@ export class LoginPageComponent implements OnInit {
       this.authService.login(data.username,data.password).subscribe({
         next: data => {
           if(data.status === 200){
-            console.log(JSON.stringify(data));
             sessionStorage.setItem("jwtToken", data.headers.get('Authorization'));
-            console.log("JWT Token -> " + data.headers.get('Authorization'));
            this.router.navigate(['/products']);
           }
       },

@@ -10,11 +10,6 @@ import {environment} from '../environments/environment.prod';
 export class ProductService implements OnInit{
 
   constructor(private http: HttpClient, private authService: AuthService) {
-    // this.jwtToken = "";
-    // this.authService.getJwtToken.subscribe(data =>{
-    //   this.jwtToken = data;
-    //   console.log("JwtToken value changed in product service -> " + this.jwtToken);
-    // });
   }
 
   ngOnInit(){

@@ -88,7 +88,6 @@ export class ProductsComponent implements OnInit {
     const dialogRef = this.dialog.open(ProductModel, dialogConfig);
       dialogRef.afterClosed().subscribe(data =>{
         if(data === "done"){
-          console.log("done is obtained");
           this.productService.getAllProducts().subscribe({
             next: allProducts =>{
               this.dataSource = new MatTableDataSource(allProducts as ProductData[]);
@@ -96,7 +95,6 @@ export class ProductsComponent implements OnInit {
               this.dataSource.sort = this.sort;
             },
             error: errorAllProducts => {
-              console.log(errorAllProducts);
               this.dataSource = new MatTableDataSource([] as ProductData[]);
               this.dataSource.paginator = this.paginator;
               this.dataSource.sort = this.sort;
@@ -120,7 +118,6 @@ export class ProductsComponent implements OnInit {
     const dialogRef = this.dialog.open(ProductModel, dialogConfig);
     dialogRef.afterClosed().subscribe(result => {
       if(result === "done"){
-        console.log("Done is passed");
         this.productService.getAllProducts().subscribe({
           next: allProducts =>{
             this.dataSource = new MatTableDataSource(allProducts as ProductData[]);
@@ -128,7 +125,6 @@ export class ProductsComponent implements OnInit {
             this.dataSource.sort = this.sort;
           },
           error: errorAllProducts => {
-            console.log(errorAllProducts);
             this.dataSource = new MatTableDataSource([] as ProductData[]);
             this.dataSource.paginator = this.paginator;
             this.dataSource.sort = this.sort;

@@ -48,7 +48,6 @@ public class AirBusController {
 
     @GetMapping(path = "/getAllProductsByPage", produces = "application/json", consumes = "application/json")
     public List<ProductDTO> getAllProductsByPage(@RequestParam int pageNo, @RequestParam int pageSize){
-        System.out.println("Page no -> " + pageNo + " PageSize -> " + pageSize);
         return airBusService.getAllProductsByPage(pageNo, pageSize);
     }
 
