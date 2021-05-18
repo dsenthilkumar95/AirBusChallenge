@@ -16,12 +16,14 @@ export class LoginPageComponent implements OnInit {
       username: ['', [Validators.required]],
       password: ['', [Validators.required]]
     });
+    sessionStorage.setItem("jwtToken", "");
    }
 
   ngOnInit(): void {
   }
   loginForm;
   createResult:String;
+  regSuccess: Boolean = false; 
   get f() { return this.loginForm.controls; }
   register() {
     if (this.loginForm.valid) {
@@ -29,6 +31,7 @@ export class LoginPageComponent implements OnInit {
       this.authService.register(data.username,data.password).subscribe({
         next: data => {
           if(data.status === 200){
+            this.regSuccess = true;
             this.createResult = "User Registration Successful";
             setTimeout(()=>{
               this.createResult = "";

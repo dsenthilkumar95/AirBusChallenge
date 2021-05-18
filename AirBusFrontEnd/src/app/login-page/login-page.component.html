@@ -20,7 +20,7 @@
 					<span *ngIf="f.password.errors.required && f.password.touched">Password is required</span>
 				</span><br>
 				<button (click)="login()" [disabled]="loginForm.invalid" value="Login">Login</button><br>
-				<button (click)="register()" [disabled]="loginForm.invalid" value="Register">Register</button>
+				<button (click)="register()" [disabled]="loginForm.invalid || regSuccess" value="Register">Register</button>
 				<span class="registerMsg" *ngIf="createResult">{{createResult}}</span>		
 			</div>
 		
