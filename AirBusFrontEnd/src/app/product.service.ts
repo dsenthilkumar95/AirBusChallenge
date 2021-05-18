@@ -2,7 +2,7 @@ import { Injectable, OnInit } from '@angular/core';
 import { ProductData } from './products/ProductData';
 import { HttpClient, HttpHeaders, HttpParams } from '@angular/common/http';
 import { AuthService } from './auth.service';
-import {environment} from '../environments/environment';
+import {environment} from '../environments/environment.prod';
 
 @Injectable({
   providedIn: 'root'

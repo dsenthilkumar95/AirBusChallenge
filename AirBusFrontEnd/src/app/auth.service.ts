@@ -1,7 +1,6 @@
 import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { Injectable } from '@angular/core';
-import {environment} from '../environments/environment';
-import { BehaviorSubject, ReplaySubject } from 'rxjs';
+import {environment} from '../environments/environment.prod';
 
 @Injectable({
   providedIn: 'root'
@@ -9,16 +8,6 @@ import { BehaviorSubject, ReplaySubject } from 'rxjs';
 export class AuthService {
 
   constructor(private http: HttpClient) { }
-  public jwtToken = new ReplaySubject<String>(1);
-  getJwtToken = this.jwtToken.asObservable();
-
-  setJwtToken(nextJwtToken:String){
-    this.jwtToken.next(nextJwtToken);
-  }
-
-  clearJwtToken(){
-    this.jwtToken.next("");
-  }
 
   register(username: string, password:string){
     const headers = new HttpHeaders({ 'Content-Type': 'application/json','Access-Control-Allow-Origin':'*'});
