@@ -14,7 +14,7 @@ import { ModalData } from './ModalData';
 export class ProductModel implements OnInit{
   productForm : FormGroup;
   constructor(
-    public dialogRef: MatDialogRef<ProductModel>,@Inject(MAT_DIALOG_DATA) public modalData:ModalData, public productService: ProductService, private formBuilder: FormBuilder) {
+    private dialogRef: MatDialogRef<ProductModel>,@Inject(MAT_DIALOG_DATA) private modalData:ModalData, private productService: ProductService, private formBuilder: FormBuilder) {
       this.opsButton = modalData.operation;
       this.errorMsg="";
       this.productForm = this.formBuilder.group({

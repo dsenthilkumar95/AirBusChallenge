@@ -10,7 +10,7 @@ import { AuthService } from '../auth.service';
 })
 export class LoginPageComponent implements OnInit {
 
-  constructor(private fb: FormBuilder, public authService: AuthService, private router: Router) {
+  constructor(private fb: FormBuilder, private authService: AuthService, private router: Router) {
     this.createResult = "";
     this.loginForm = this.fb.group({
       username: ['', [Validators.required]],

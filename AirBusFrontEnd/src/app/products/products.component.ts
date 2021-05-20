@@ -21,7 +21,7 @@ export class ProductsComponent implements OnInit {
   @ViewChild(MatPaginator, {static: false}) paginator: MatPaginator;
   @ViewChild(MatSort, {static: false}) sort: MatSort;
   errorMessage:String="";
-  constructor(public dialog: MatDialog, public productService: ProductService, private authService: AuthService, private router:Router) {
+  constructor(private dialog: MatDialog, private productService: ProductService, private authService: AuthService, private router:Router) {
     this.productService.getAllProducts().subscribe({
       next: data => {
         this.dataSource = new MatTableDataSource(data as ProductData[]);
