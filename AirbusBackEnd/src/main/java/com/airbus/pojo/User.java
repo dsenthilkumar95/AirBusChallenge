@@ -19,7 +19,7 @@ public class User implements Serializable {
     @GeneratedValue(strategy = GenerationType.SEQUENCE, generator = "USER_SEQUENCE")
     @SequenceGenerator(name = "USER_SEQUENCE", sequenceName = "USER_SEQUENCE", allocationSize = 1)
     private long id;
-    @Column(name = "username")
+    @Column(name = "username", unique = true)
     private String username;
     @Column(name = "password")
     private String password;
