@@ -1,32 +1,32 @@
 <h2 mat-dialog-title class="dialog-title">{{opsButton}} Product</h2>
 <mat-dialog-content class="dialog-form" [formGroup]="productForm">
-  <mat-form-field>
+  <mat-form-field class="dialog-form-field">
     <mat-label class="dialog-label">Category</mat-label>
-    <input class="dialog-input-category" matInput placeholder="Product Category" formControlName="category">
-    <span class="errorSpan-category" *ngIf="f.category.errors">
+    <input class="dialog-input"  matInput placeholder="Product Category" formControlName="category">
+    <span class="errorSpan"  *ngIf="f.category.errors">
       <span *ngIf="f.category.errors.required && f.category.touched">Category is required</span>
     </span>
-  </mat-form-field><br><br>
-  <mat-form-field>
+  </mat-form-field><br>
+  <mat-form-field class="dialog-form-field">
     <mat-label class="dialog-label">Name</mat-label>
-    <input class="dialog-input-name" matInput placeholder="Product Name" formControlName="name">
-    <span class="errorSpan-name" *ngIf="f.name.errors">
+    <input class="dialog-input"  matInput placeholder="Product Name" formControlName="name">
+    <span class="errorSpan"  *ngIf="f.name.errors">
       <span *ngIf="f.name.errors.required && f.name.touched">Name is required</span>
     </span>
-  </mat-form-field><br><br>
-  <mat-form-field>
-    <mat-label class="dialog-label">Description</mat-label>
-    <input class="dialog-input-description" matInput placeholder="Product Description" formControlName="description">
-  </mat-form-field><br><br>
-  <mat-form-field>
-    <mat-label class="dialog-label">Units</mat-label>
-    <input class="dialog-input-units" matInput type="number" placeholder="Product Units" formControlName="units">
-    <span class="errorSpan-units" *ngIf="f.units.errors">
+  </mat-form-field><br>
+  <mat-form-field class="dialog-form-field">
+    <mat-label class="dialog-label" >Description</mat-label>
+    <input class="dialog-input"  matInput placeholder="Product Description" formControlName="description">
+  </mat-form-field><br>
+  <mat-form-field class="dialog-form-field">
+    <mat-label class="dialog-label" >Units</mat-label>
+    <input class="dialog-input"  matInput type="number" placeholder="Product Units" formControlName="units">
+    <span class="errorSpan"  *ngIf="f.units.errors">
       <span *ngIf="f.units.errors.min && f.units.touched">Units should be minumum of 0</span>
       <span *ngIf="f.units.errors.max && f.units.touched">Units can be maximum of 100</span>
       <span *ngIf="f.units.errors.required && f.units.touched">Units is required</span>
     </span>
-  </mat-form-field><br><br>
+  </mat-form-field><br>
 </mat-dialog-content>
 <mat-dialog-actions class="dialog-actions">
   <button mat-button class="cancel-button" (click)="onNoClick()">Cancel</button>&nbsp;&nbsp;&nbsp;&nbsp;

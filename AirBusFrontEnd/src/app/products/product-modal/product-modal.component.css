@@ -12,48 +12,33 @@ p {
 
 .dialog-form{
   position: relative;
+  display: table;
+}
+
+.dialog-form-field{
+  position: relative;
+  display: table-row;
 }
 
 .dialog-actions{ 
   position: relative;
   left: 30vw;
 }
-.dialog-input-category{
-  position: relative;
-  left: 15vw;
-}
 
-.dialog-input-name{
+.dialog-input{
   position: relative;
-  left: 16.5vw;
-}
-
-.dialog-input-description{
-  position: relative;
-  left: 14vw;
-}
-
-.dialog-input-units{
-  position: relative;
-  left: 16.75vw;
+  display: table-cell;
 }
 
 .dialog-label{
   position: relative;
-  left: 8vw;
+  display: table-cell;
+  padding-right: 10vw;
+  padding-left: 8vw;
 }
-.errorSpan-category{
+
+.errorSpan{
   position: relative;
-  left:18vw;
-  color: red;
-}
-.errorSpan-name{
-  position: relative;
-  left: 19.5vw;
-  color: red;
-}
-.errorSpan-units{
-  position: relative;
-  left:20vw;
+  display: table-cell;
   color: red;
 }
